@@ -41,3 +41,12 @@ only work on the live site.
 - **SQLNext product page:** add `'/sqlnext/'` to `LIVE_PENDING_LINKS` in
   `assets/js/site.js`. Every element with `data-link-pending="/sqlnext/"`
   turns into a real link.
+
+## Notes for editors
+
+- Colours, fonts and spacing are CSS custom properties at the top of
+  `assets/css/base.css`, with a dark set (default) and a light set.
+- Sections inside `<main>` use `content-visibility: auto` so the first paint
+  stays fast. Same-page links render everything first, so jumps stay exact.
+- Product visuals are illustrative SVG/CSS sketches, not screenshots.
+- Animations stop when `prefers-reduced-motion: reduce` is set.
