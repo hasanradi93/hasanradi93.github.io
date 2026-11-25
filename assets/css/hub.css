@@ -1,0 +1,269 @@
+/* RAZOV hub: one screen with two doors, Razov Bots and Razov DB.
+   Builds on base.css (tokens, header, buttons, footer). */
+
+:root {
+  --rb: #22c3b0;
+  --rb-rgb: 34, 195, 176;
+  --db: var(--sq);
+  --db-rgb: var(--sq-rgb);
+}
+
+:root[data-theme="light"] {
+  --rb: #0b6b61;
+  --rb-rgb: 11, 107, 97;
+}
+
+.hub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - var(--header-h) - 140px);
+  padding-block: clamp(32px, 4.5vw, 56px) clamp(40px, 5vw, 64px);
+  overflow-x: clip;
+  isolation: isolate;
+}
+
+.hub__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(50% 55% at 6% 90%, rgba(var(--rb-rgb), 0.16), transparent 70%),
+    radial-gradient(52% 50% at 94% 10%, rgba(var(--db-rgb), 0.17), transparent 70%),
+    radial-gradient(36% 40% at 96% 96%, rgba(var(--dp-rgb), 0.1), transparent 70%);
+}
+
+.hub__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.hub__canvas.is-ready { opacity: 1; }
+
+.hub__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(80% 70% at 50% 45%, var(--bg) 0%, rgba(0, 0, 0, 0) 75%),
+    linear-gradient(to bottom, transparent 72%, var(--bg));
+  opacity: 0.8;
+}
+
+.hub__intro {
+  max-width: 880px;
+}
+
+.hub h1 {
+  font-size: clamp(2rem, 1.1rem + 3vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.hub__lead {
+  max-width: 600px;
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: clamp(1.04rem, 0.98rem + 0.35vw, 1.22rem);
+  line-height: 1.6;
+}
+
+.hub__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.doors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 28px);
+  margin-top: clamp(28px, 3.5vw, 44px);
+}
+
+.door {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-glass);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.door::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--accent);
+}
+
+.door--bots { --accent: var(--rb); --accent-rgb: var(--rb-rgb); }
+.door--db { --accent: var(--db); --accent-rgb: var(--db-rgb); }
+
+.door:hover,
+.door:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow: var(--shadow), 0 24px 60px -30px rgba(var(--accent-rgb), 0.55);
+}
+
+.door__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+}
+
+.door__icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.door h2 {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem);
+  letter-spacing: -0.02em;
+}
+
+/* The heading link covers the whole card, so the card is one click target. */
+.door h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.door h2 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.door h2 a:focus-visible {
+  outline: none;
+}
+
+.door:has(h2 a:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.door__text {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.door__list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.door__list li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.door__list li::before {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.door__list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.door__go {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.door__go .icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s var(--ease);
+}
+
+.door:hover .door__go .icon { transform: translateX(4px); }
+
+.door__path {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* Entrance: the two doors rise in after the heading. */
+@media (prefers-reduced-motion: no-preference) {
+  .hub__intro,
+  .door {
+    animation: hub-rise 0.8s var(--ease) both;
+  }
+  .door--bots { animation-delay: 0.12s; }
+  .door--db { animation-delay: 0.22s; }
+}
+
+@keyframes hub-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 760px) {
+  .doors { grid-template-columns: 1fr; }
+  .hub { min-height: 0; }
+}
+
+.site-footer--slim {
+  padding-block: 28px;
+}
+
+.site-footer--slim .footer__bottom {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Forwarder pages (old addresses) */
+.moved {
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.moved p { color: var(--text-muted); margin-top: 12px; }
+.moved a { color: var(--dp); }

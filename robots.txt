@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://hasanradi93.github.io/sitemap.xml
+Sitemap: https://hasanradi93.github.io/razov-db/sitemap.xml
+Sitemap: https://hasanradi93.github.io/razov-bots/sitemap.xml

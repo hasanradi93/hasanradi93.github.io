@@ -3,15 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page not found | RAZOV.tech solutions</title>
-  <meta name="description" content="This page does not exist. Go back to RAZOV.tech solutions to find DataPilot AI, SQLNext and SchemaZone.">
+  <title>Page not found | RAZOV.tech</title>
   <meta name="robots" content="noindex">
-  <link rel="canonical" href="https://hasanradi93.github.io/">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#060a13">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-  <!-- Theme first: an inline script placed after the stylesheets would wait for them and block parsing. -->
   <script>
     (function () {
       var root = document.documentElement;
@@ -29,7 +26,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"></noscript>
   <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/sections.css">
+  <link rel="stylesheet" href="/assets/css/hub.css">
   <script src="/assets/js/site.js" defer></script>
   <script src="/assets/js/hero-network.js" defer></script>
 </head>
@@ -40,48 +37,38 @@
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.6A8 8 0 0 1 9.4 4a8 8 0 1 0 10.6 10.6z"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   </svg>
 
   <header class="site-header" data-header>
     <div class="container header__inner">
       <a class="brand" href="/">
         <img src="/assets/img/logo-mark.svg" width="36" height="36" alt="">
-        <span>RAZOV<span class="brand__tld">.tech</span> <span class="brand__sub">solutions</span></span>
+        <span>RAZOV<span class="brand__tld">.tech</span></span>
       </a>
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="/#products">Products</a></li>
-          <li><a href="/#upload">Upload .sql</a></li>
-          <li><a href="/#pricing">Pricing</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
       <div class="header__actions">
         <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
           <svg class="icon icon--sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
           <svg class="icon icon--moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
-        </button>
-        <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-          <svg class="icon icon--menu" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
-          <svg class="icon icon--close" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero lost" aria-labelledby="lost-title">
-      <div class="hero__backdrop" aria-hidden="true"></div>
-      <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+    <section class="hub" aria-labelledby="lost-title">
+      <div class="hub__backdrop" aria-hidden="true"></div>
+      <canvas class="hub__canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hub__scrim" aria-hidden="true"></div>
       <div class="container">
-        <p class="lost__code text-gradient" aria-hidden="true">404</p>
-        <h1 id="lost-title">This page is not in the schema.</h1>
-        <p>The address may be mistyped, or the page has moved. The products and the .sql how-to are on the home page.</p>
-        <div class="hero__ctas">
-          <a class="btn btn--primary" href="/">Go to the home page <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn--ghost" href="/#products">See the products</a>
+        <div class="hub__intro">
+          <p class="eyebrow">404</p>
+          <h1 id="lost-title">This page is not here.</h1>
+          <p class="hub__lead">The address may be mistyped, or the page has moved. The database products now live under Razov DB.</p>
+          <p class="hub__ctas">
+            <a class="btn btn--primary" href="/razov-db/">Go to Razov DB <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="/razov-bots/">Go to Razov Bots</a>
+            <a class="btn btn--ghost" href="/">RAZOV home</a>
+          </p>
         </div>
       </div>
     </section>
@@ -89,13 +76,13 @@
 
   <footer class="site-footer site-footer--slim">
     <div class="container footer__bottom">
-      <p>© 2026 RAZOV.tech solutions</p>
-      <p class="footer__family"><span class="footer__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>DataPilot AI, SQLNext and SchemaZone are part of <strong>RAZOV.tech solutions</strong></span></p>
+      <p>© 2026 RAZOV.tech</p>
+      <p><a href="https://github.com/hasanradi93">GitHub</a></p>
     </div>
     <nav class="container footer__legal" aria-label="Legal">
-      <a href="/legal.html#terms">Terms</a>
-      <a href="/legal.html#privacy">Privacy</a>
-      <a href="/legal.html#refunds">Refunds</a>
+      <a href="/razov-db/legal.html#terms">Terms</a>
+      <a href="/razov-db/legal.html#privacy">Privacy</a>
+      <a href="/razov-db/legal.html#refunds">Refunds</a>
       <a href="mailto:hassan93radi@gmail.com">hassan93radi@gmail.com</a>
     </nav>
   </footer>

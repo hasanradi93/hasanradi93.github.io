@@ -3,35 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RAZOV.tech solutions | DataPilot AI, SQLNext and SchemaZone</title>
-  <meta name="description" content="RAZOV.tech solutions makes database tools that ask, convert and design. DataPilot AI answers plain-word questions about your database, SQLNext converts databases between versions and engines, and SchemaZone turns a .sql file into an interactive ER diagram.">
+  <title>RAZOV.tech | Razov Bots and Razov DB</title>
+  <meta name="description" content="RAZOV.tech makes AI assistants that answer, book and sell on Telegram (Razov Bots), and database tools that ask, convert and design (Razov DB: DataPilot AI, SchemaZone and SQLNext).">
   <link rel="canonical" href="https://hasanradi93.github.io/">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#060a13">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="RAZOV.tech solutions">
-  <meta property="og:title" content="RAZOV.tech solutions: database solutions that ask, convert and design">
-  <meta property="og:description" content="DataPilot AI asks your data, SQLNext moves your database to the next version or engine, and SchemaZone designs and maps your database.">
+  <meta property="og:site_name" content="RAZOV.tech">
+  <meta property="og:title" content="RAZOV.tech: Razov Bots and Razov DB">
+  <meta property="og:description" content="AI assistants that answer, book and sell on Telegram, and database tools that ask, convert and design.">
   <meta property="og:url" content="https://hasanradi93.github.io/">
-  <meta property="og:image" content="https://hasanradi93.github.io/assets/img/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="RAZOV.tech solutions logo with the words: database solutions that ask, convert and design.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RAZOV.tech solutions: database solutions that ask, convert and design">
-  <meta name="twitter:description" content="DataPilot AI asks your data, SQLNext moves your database to the next version or engine, and SchemaZone designs and maps your database.">
-  <meta name="twitter:image" content="https://hasanradi93.github.io/assets/img/og-image.png">
-  <meta name="twitter:image:alt" content="RAZOV.tech solutions logo with the words: database solutions that ask, convert and design.">
-
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RAZOV.tech: Razov Bots and Razov DB">
+  <meta name="twitter:description" content="AI assistants that answer, book and sell on Telegram, and database tools that ask, convert and design.">
   <!-- Theme first: an inline script placed after the stylesheets would wait for them and block parsing. -->
   <script>
     (function () {
       var root = document.documentElement;
       root.classList.add('js');
-      if (location.hash) root.classList.add('render-all');
       var theme = null;
       try { theme = localStorage.getItem('razov-theme'); } catch (e) { theme = null; }
       if (theme !== 'light' && theme !== 'dark') {
@@ -45,16 +36,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/sections.css">
-
+  <link rel="stylesheet" href="assets/css/hub.css">
   <script src="assets/js/site.js" defer></script>
   <script src="assets/js/hero-network.js" defer></script>
-
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "RAZOV.tech solutions",
+      "name": "RAZOV.tech",
       "url": "https://hasanradi93.github.io/",
       "logo": "https://hasanradi93.github.io/assets/img/logo-mark.svg",
       "email": "hassan93radi@gmail.com",
@@ -66,747 +55,83 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
-    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.6A8 8 0 0 1 9.4 4a8 8 0 1 0 10.6 10.6z"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5l8.5 6 8.5-6"/></symbol>
-    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path d="M8.5 10h7M8.5 7h4"/></symbol>
     <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path d="M8.5 12.5v-2M12 12.5V8M15.5 12.5v-3"/></symbol>
-    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16M7 16v-4M12 16V7M17 16v-6"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
-    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 14c2.2.2 3.6 1.8 4 4.5"/></symbol>
-    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
-    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6.5 3h7.5l4.5 4.5V20a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M13.5 3v5h5"/></symbol>
-    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5"/></symbol>
-    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></symbol>
-    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12.5 15h4.5"/></symbol>
-    <symbol id="i-schema" viewBox="0 0 24 24"><rect x="3" y="3.5" width="8" height="6.5" rx="1.5"/><rect x="13" y="14" width="8" height="6.5" rx="1.5"/><rect x="13" y="3.5" width="8" height="6.5" rx="1.5"/><path d="M11 6.8h2M7 10v5.5a1.5 1.5 0 0 0 1.5 1.5H13"/></symbol>
-    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.3-4.3"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
-    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></symbol>
-    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3z"/></symbol>
-    <symbol id="i-move" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></symbol>
-    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.1 2.1 0 0 0-3-3L5 17z"/><path d="M14 7l3 3"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
-    <symbol id="i-offline" viewBox="0 0 24 24"><path d="M3 3l18 18M8.6 16.4a5 5 0 0 1 6.8 0M5.1 12.9a10 10 0 0 1 4.6-2.6M14.5 10.2a10 10 0 0 1 4.4 2.7M2 9.2a15 15 0 0 1 4.3-2.8M10.6 5.6A15 15 0 0 1 22 9.2"/><path d="M12 20h.01"/></symbol>
-    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
-    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7 9l5-5 5 5M5 20h14"/></symbol>
   </svg>
 
   <header class="site-header" data-header>
     <div class="container header__inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="./">
         <img src="assets/img/logo-mark.svg" width="36" height="36" alt="">
-        <span>RAZOV<span class="brand__tld">.tech</span> <span class="brand__sub">solutions</span></span>
+        <span>RAZOV<span class="brand__tld">.tech</span></span>
       </a>
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#upload">Upload .sql</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
       <div class="header__actions">
         <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
           <svg class="icon icon--sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
           <svg class="icon icon--moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
-        </button>
-        <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-          <svg class="icon icon--menu" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
-          <svg class="icon icon--close" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section id="top" class="hero" aria-labelledby="hero-title" data-inview>
-      <div class="hero__backdrop" aria-hidden="true"></div>
-      <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
-      <div class="hero__scrim" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="eyebrow">RAZOV.tech solutions</p>
-          <h1 id="hero-title">Database solutions that <span class="text-gradient">ask, convert and design.</span></h1>
-          <p class="hero__lead">One family of tools for the databases you already have. <strong>DataPilot</strong> asks your data, <strong>SQLNext</strong> moves your database to the next version or engine, and <strong>SchemaZone</strong> designs and maps your database.</p>
-          <p class="typing" aria-hidden="true">
-            <span class="typing__prompt">&rsaquo;</span>
-            <span class="typing__text"><span data-typing data-phrases='["DataPilot asks your data.","SQLNext moves it to the next version.","SchemaZone designs and maps it."]'>DataPilot asks your data.</span></span>
-          </p>
-          <div class="hero__ctas">
-            <a class="btn btn--primary" href="#products">Explore the products <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn--ghost" href="/schemazone/">Try SchemaZone free</a>
-          </div>
-          <ul class="hero__facts">
-            <li><strong data-count="3">3</strong> database products</li>
-            <li><strong data-count="4">4</strong> SQL dialects read by SchemaZone</li>
-            <li><strong data-count="2">2</strong> languages to ask DataPilot in</li>
-            <li><strong>$<span data-count="0">0</span></strong> to start</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products overview -->
-    <section id="products" class="section" aria-labelledby="products-title">
+    <section class="hub" aria-labelledby="hub-title">
+      <div class="hub__backdrop" aria-hidden="true"></div>
+      <canvas class="hub__canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hub__scrim" aria-hidden="true"></div>
       <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">The family</p>
-          <h2 id="products-title">Three products. One job each.</h2>
-          <p>Ask your data, convert it to the next version or engine, and see its design. Pick the tool you need today.</p>
-        </header>
-        <ul class="products-grid">
-          <li class="reveal" style="--d: 0s">
-            <article class="product-card accent-dp" data-tilt>
-              <div class="product-card__top">
-                <span class="tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></span>
-                <span class="badge badge--dp badge--live">Available</span>
-              </div>
-              <p class="product-card__verb">Asks</p>
-              <h3>DataPilot AI</h3>
-              <p>Ask your company's database questions in plain words, in English or Arabic. Works with any database; your data stays on your PC.</p>
-              <ul class="mini-list">
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>No SQL to write, read-only by design</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Tables, charts, Excel and CSV</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Free download for Windows</li>
-              </ul>
-              <a class="card-link" href="#datapilot">Explore DataPilot AI <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-            </article>
-          </li>
-          <li class="reveal" style="--d: 0.1s">
-            <article class="product-card accent-sq" data-tilt>
-              <div class="product-card__top">
-                <span class="tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-swap"/></svg></span>
-                <span class="badge badge--sq">Early access</span>
-              </div>
-              <p class="product-card__verb">Converts</p>
-              <h3>SQLNext</h3>
-              <p>SQL migration and modernization tool: converts databases between versions and engines, and explains every change.</p>
-              <ul class="mini-list">
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Writes a new copy, never edits the original</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Every change with its reason</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Offline and deterministic</li>
-              </ul>
-              <a class="card-link" href="#sqlnext">Explore SQLNext <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-            </article>
-          </li>
-          <li class="reveal" style="--d: 0.2s">
-            <article class="product-card accent-sz" data-tilt>
-              <div class="product-card__top">
-                <span class="tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-schema"/></svg></span>
-                <span class="badge badge--sz badge--live">Live</span>
-              </div>
-              <p class="product-card__verb">Designs</p>
-              <h3>SchemaZone</h3>
-              <p>A visual database designer. Drop a .sql file and see your whole database as an interactive ER diagram.</p>
-              <ul class="mini-list">
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>MySQL, PostgreSQL, SQL Server, SQLite</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Runs in your browser, nothing uploaded</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Free to try</li>
-              </ul>
-              <a class="card-link" href="#schemazone">Explore SchemaZone <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- DataPilot AI -->
-    <section id="datapilot" class="section section--alt accent-dp" aria-labelledby="datapilot-title">
-      <div class="section-glow" style="--gx: 90%; --gy: 40%" aria-hidden="true"></div>
-      <div class="container detail">
-        <div class="detail__text reveal">
-          <div class="detail__meta">
-            <span class="detail__name">DataPilot AI</span>
-            <span class="badge badge--dp badge--live">Available · Free download</span>
-          </div>
-          <h2 id="datapilot-title">Ask your company's database questions in plain words.</h2>
-          <p class="detail__lead">In English or Arabic. Works with any database; your data stays on your PC.</p>
-          <ul class="feature-list">
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></span>
-              <span><strong>You never write SQL</strong>AI writes it, and it is validated as read-only (SELECT-only) before it runs.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chart"/></svg></span>
-              <span><strong>Tables and interactive charts</strong>Answers come back as tables and charts, with Excel and CSV export.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-monitor"/></svg></span>
-              <span><strong>Desktop, web and your website</strong>A native Windows desktop app, plus a web app, a website widget and a WordPress plugin.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-users"/></svg></span>
-              <span><strong>Roles and user accounts</strong>Control who sees which tables.</span>
-            </li>
-          </ul>
-          <div class="detail__ctas">
-            <a class="btn btn--dp" href="https://github.com/hasanradi93/datapilot/releases/latest/download/DataPilotAI-Setup.exe"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg> Download Free</a>
-            <a class="btn btn--ghost" href="/datapilot/">Product page <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-          </div>
-          <p class="detail__note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-monitor"/></svg> Windows 10 or 11 (64-bit) installer from GitHub releases.</p>
+        <div class="hub__intro">
+          <p class="eyebrow">RAZOV.tech</p>
+          <h1 id="hub-title">Software that talks to your customers and works with your data.</h1>
+          <p class="hub__lead">Two product lines, each with its own site. Choose where you want to go.</p>
         </div>
 
-        <figure class="detail__visual sketch reveal" style="--d: 0.1s">
-          <div class="sketch__window" role="img" aria-label="Illustrative sketch of DataPilot AI: a question typed in Arabic, the read-only SQL the AI wrote for it, and the answer as a bar chart with Excel and CSV export.">
-            <div class="sketch__bar">
-              <span class="sketch__dots"><i></i><i></i><i></i></span>
-              <span class="sketch__title"><b>DataPilot AI</b> · ask</span>
-            </div>
-            <div class="sketch__body">
-              <p class="chat-q" lang="ar" dir="rtl">اعرض الإجمالي حسب الشهر</p>
-              <p class="chat-q__tr">“Show the total by month”</p>
-              <div class="sql-card">
-                <div class="sql-card__head">
-                  <span>SQL written by AI</span>
-                  <span class="pill pill--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Read-only · SELECT</span>
-                </div>
-<pre><code><span class="sql-line" style="--i:0"><span class="tok-k">SELECT</span> month, <span class="tok-f">COUNT</span>(*) <span class="tok-k">AS</span> total</span><span class="sql-line" style="--i:1"><span class="tok-k">FROM</span> records</span><span class="sql-line" style="--i:2"><span class="tok-k">GROUP BY</span> month<span class="tok-p">;</span></span></code></pre>
-              </div>
-              <div class="answer">
-                <div class="answer__head">
-                  <span class="seg"><span>Table</span><span class="is-on">Chart</span></span>
-                </div>
-                <div class="bars">
-                  <span class="bar" style="--h:38%; --i:0"></span>
-                  <span class="bar" style="--h:54%; --i:1"></span>
-                  <span class="bar" style="--h:46%; --i:2"></span>
-                  <span class="bar" style="--h:66%; --i:3"></span>
-                  <span class="bar" style="--h:58%; --i:4"></span>
-                  <span class="bar" style="--h:78%; --i:5"></span>
-                  <span class="bar" style="--h:70%; --i:6"></span>
-                  <span class="bar" style="--h:90%; --i:7"></span>
-                </div>
-                <div class="answer__foot">
-                  <span class="pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Excel</span>
-                  <span class="pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>CSV</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <figcaption><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg> Illustrative sketch, not a screenshot.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- SQLNext -->
-    <section id="sqlnext" class="section accent-sq" aria-labelledby="sqlnext-title">
-      <div class="section-glow" style="--gx: 10%; --gy: 50%" aria-hidden="true"></div>
-      <div class="container detail detail--flip">
-        <div class="detail__text reveal">
-          <div class="detail__meta">
-            <span class="detail__name">SQLNext</span>
-            <span class="badge badge--sq">In development · Early access</span>
-          </div>
-          <h2 id="sqlnext-title">Move your database to the next version or engine.</h2>
-          <p class="detail__lead">SQL migration and modernization tool: converts databases between versions and engines, and explains every change.</p>
-          <ul class="feature-list">
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-file"/></svg></span>
-              <span><strong>Your original is never changed</strong>It reads a script or dump and finds what will not work on the target version or engine. It proposes fixes and writes a new converted copy.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"/></svg></span>
-              <span><strong>Every change is shown</strong>With the original, the converted version, the reason, the severity and the confidence.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-offline"/></svg></span>
-              <span><strong>Offline and deterministic</strong>AI is optional and only explains or suggests.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-terminal"/></svg></span>
-              <span><strong>Desktop app and command line</strong>A desktop app for Windows and a command-line tool.</span>
-            </li>
-          </ul>
-
-          <div class="path">
-            <p class="path__label">Proven on real servers</p>
-            <div class="path__track">
-              <span class="path__from">MySQL 5.1</span>
-              <span class="path__line" aria-hidden="true" data-inview></span>
-              <ul class="path__targets">
-                <li>MySQL 8.0 <span class="verified"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>loads on a real server</span></li>
-                <li>MySQL 8.4 <span class="verified"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>loads on a real server</span></li>
-                <li>MySQL 9.7</li>
-              </ul>
-            </div>
-            <p class="path__foot">The first path converts MySQL 5.1 dumps for MySQL 8.0, 8.4 and 9.7. The output loads on real MySQL 8.0 and 8.4 servers.</p>
-          </div>
-
-          <p class="price-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg> Pricing announced at launch</p>
-          <div class="detail__ctas">
-            <a class="btn btn--sq" href="mailto:hassan93radi@gmail.com?subject=SQLNext%20early%20access"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg> Ask for early access</a>
-            <span class="chip" data-link-pending="/sqlnext/">Product page coming soon</span>
-          </div>
-        </div>
-
-        <figure class="detail__visual sketch reveal" style="--d: 0.1s">
-          <div class="sketch__window" role="img" aria-label="Illustrative sketch of an SQLNext change report: the original dump stays unchanged, a new converted copy is written, and one change is shown with the original line, the converted line, the reason, the severity and the confidence.">
-            <div class="sketch__bar">
-              <span class="sketch__dots"><i></i><i></i><i></i></span>
-              <span class="sketch__title"><b>SQLNext</b> · change report</span>
-            </div>
-            <div class="sketch__body">
-              <div class="files">
-                <span class="file"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>dump-5.1.sql <em>original, unchanged</em></span>
-                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-                <span class="file file--new"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>dump-8.4.sql <em>new copy</em></span>
-              </div>
-              <div class="change">
-                <div class="change__row change__row--old">
-                  <span class="change__label">Original</span>
-                  <span class="change__sign">−</span>
-                  <span>CREATE DEFINER=`legacy_app`@`%` VIEW `v_top_customers` AS …</span>
-                </div>
-                <div class="change__row change__row--new">
-                  <span class="change__label">Converted</span>
-                  <span class="change__sign">+</span>
-                  <span>CREATE VIEW `v_top_customers` AS …</span>
-                </div>
-                <dl class="change__meta">
-                  <div><dt>Reason</dt><dd>The owner account does not exist on the new server, which would refuse the view (error 1449).</dd></div>
-                  <div><dt>Severity</dt><dd><span class="sev">High</span></dd></div>
-                  <div><dt>Confidence</dt><dd><span class="conf">High</span></dd></div>
-                </dl>
-              </div>
-              <div class="sketch__pills">
-                <span class="pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-offline"/></svg>Offline</span>
-                <span class="pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>AI optional: explains only</span>
-              </div>
-            </div>
-          </div>
-          <figcaption><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg> Illustrative sketch, not a screenshot.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- SchemaZone -->
-    <section id="schemazone" class="section section--alt accent-sz" aria-labelledby="schemazone-title">
-      <div class="section-glow" style="--gx: 88%; --gy: 55%" aria-hidden="true"></div>
-      <div class="container detail">
-        <div class="detail__text reveal">
-          <div class="detail__meta">
-            <span class="detail__name">SchemaZone</span>
-            <span class="badge badge--sz badge--live">Live · Try it free in your browser</span>
-          </div>
-          <h2 id="schemazone-title">See your whole database as an interactive ER diagram.</h2>
-          <p class="detail__lead">A visual database designer. Drop a .sql file and see your tables, columns, keys and the relationships between them.</p>
-          <ul class="feature-list">
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-file"/></svg></span>
-              <span><strong>Reads real CREATE TABLE scripts</strong>From MySQL, PostgreSQL, SQL Server and SQLite, including primary keys, foreign keys and <code>ALTER TABLE … ADD FOREIGN KEY</code>.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg></span>
-              <span><strong>Auto-arranged and grouped</strong>Related tables are grouped together and coloured by group.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-edit"/></svg></span>
-              <span><strong>Drag, focus, search and edit</strong>Focus on one table to see its relations, edit tables and columns, and add new ones.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg></span>
-              <span><strong>Export your Zone</strong>Back to a .sql script or a .json Zone file.</span>
-            </li>
-            <li>
-              <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg></span>
-              <span><strong>Private by design</strong>The file is read inside your browser and never uploaded. Your Zones are saved in your browser.</span>
-            </li>
-          </ul>
-          <div class="detail__ctas">
-            <a class="btn btn--sz" href="/schemazone/">Open SchemaZone <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn--ghost" href="#upload">How to upload your .sql</a>
-          </div>
-        </div>
-
-        <figure class="detail__visual sketch reveal" style="--d: 0.1s" data-inview>
-          <div class="sketch__window" role="img" aria-label="Illustrative sketch of a SchemaZone diagram: four tables in two coloured groups, departments, employees, projects and assignments, joined by foreign-key lines.">
-            <div class="sketch__bar">
-              <span class="sketch__dots"><i></i><i></i><i></i></span>
-              <span class="sketch__title"><b>SchemaZone</b> · my Zone</span>
-            </div>
-            <div class="sketch__body">
-              <svg class="er" viewBox="0 0 480 268" aria-hidden="true" focusable="false">
-                <!-- relationship lines -->
-                <path class="er-link" style="--i:0" pathLength="1" d="M40 213 C12 213 12 59 40 59"/>
-                <path class="er-link" style="--i:1" pathLength="1" d="M296 191 C252 191 252 191 208 191"/>
-                <path class="er-link" style="--i:2" pathLength="1" d="M296 213 C258 213 266 59 300 59"/>
-                <path class="er-pulse" style="--i:0" pathLength="1" d="M40 213 C12 213 12 59 40 59"/>
-                <path class="er-pulse" style="--i:1" pathLength="1" d="M296 191 C252 191 252 191 208 191"/>
-                <path class="er-pulse" style="--i:2" pathLength="1" d="M296 213 C258 213 266 59 300 59"/>
-
-                <!-- departments -->
-                <g class="er-table er-g1" transform="translate(40 18)">
-                  <rect class="er-box" width="150" height="82" rx="10"/>
-                  <rect class="er-head" width="150" height="30" rx="10"/>
-                  <line class="er-head-line" x1="0" y1="30" x2="150" y2="30"/>
-                  <text class="er-title" x="12" y="20">departments</text>
-                  <text class="er-key" x="12" y="45">PK</text><text class="er-col" x="36" y="45">id</text><text class="er-col" x="138" y="45" text-anchor="end">INT</text>
-                  <text class="er-col" x="36" y="67">name</text><text class="er-col" x="138" y="67" text-anchor="end">VARCHAR</text>
-                </g>
-
-                <!-- employees -->
-                <g class="er-table er-g1" transform="translate(40 150)">
-                  <rect class="er-focus" x="-5" y="-5" width="178" height="114" rx="13"/>
-                  <rect class="er-box" width="168" height="104" rx="10"/>
-                  <rect class="er-head" width="168" height="30" rx="10"/>
-                  <line class="er-head-line" x1="0" y1="30" x2="168" y2="30"/>
-                  <text class="er-title" x="12" y="20">employees</text>
-                  <text class="er-key" x="12" y="45">PK</text><text class="er-col" x="36" y="45">id</text><text class="er-col" x="156" y="45" text-anchor="end">INT</text>
-                  <text class="er-key" x="12" y="67">FK</text><text class="er-col" x="36" y="67">department_id</text>
-                  <text class="er-col" x="36" y="89">name</text><text class="er-col" x="156" y="89" text-anchor="end">VARCHAR</text>
-                </g>
-
-                <!-- projects -->
-                <g class="er-table er-g2" transform="translate(300 18)">
-                  <rect class="er-box" width="160" height="82" rx="10"/>
-                  <rect class="er-head" width="160" height="30" rx="10"/>
-                  <line class="er-head-line" x1="0" y1="30" x2="160" y2="30"/>
-                  <text class="er-title" x="12" y="20">projects</text>
-                  <text class="er-key" x="12" y="45">PK</text><text class="er-col" x="36" y="45">id</text><text class="er-col" x="148" y="45" text-anchor="end">INT</text>
-                  <text class="er-col" x="36" y="67">title</text><text class="er-col" x="148" y="67" text-anchor="end">VARCHAR</text>
-                </g>
-
-                <!-- assignments -->
-                <g class="er-table er-g2" transform="translate(296 150)">
-                  <rect class="er-box" width="164" height="82" rx="10"/>
-                  <rect class="er-head" width="164" height="30" rx="10"/>
-                  <line class="er-head-line" x1="0" y1="30" x2="164" y2="30"/>
-                  <text class="er-title" x="12" y="20">assignments</text>
-                  <text class="er-key" x="12" y="45">FK</text><text class="er-col" x="36" y="45">employee_id</text>
-                  <text class="er-key" x="12" y="67">FK</text><text class="er-col" x="36" y="67">project_id</text>
-                </g>
-
-                <!-- link ends -->
-                <circle class="er-end" cx="40" cy="213" r="3.5"/><circle class="er-end" cx="40" cy="59" r="3.5"/>
-                <circle class="er-end" cx="296" cy="191" r="3.5"/><circle class="er-end" cx="208" cy="191" r="3.5"/>
-                <circle class="er-end" cx="296" cy="213" r="3.5"/><circle class="er-end" cx="300" cy="59" r="3.5"/>
-              </svg>
-            </div>
-          </div>
-          <figcaption><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg> Illustrative sketch, not a screenshot.</figcaption>
-        </figure>
-      </div>
-      <div class="container">
-        <ul class="dialects reveal" aria-label="SQL dialects SchemaZone reads">
-          <li>MySQL</li>
-          <li>PostgreSQL</li>
-          <li>SQL Server</li>
-          <li>SQLite</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- How to upload your .sql -->
-    <section id="upload" class="section accent-sz" aria-labelledby="upload-title">
-      <div class="container">
-        <header class="section-head section-head--center reveal">
-          <p class="eyebrow eyebrow--sz">SchemaZone how-to</p>
-          <h2 id="upload-title">How to upload your .sql file to your Zone</h2>
-          <p>Four steps from your database to a diagram. “Upload” here means opening the file in SchemaZone: it is read on your own computer and never sent anywhere.</p>
-        </header>
-
-        <ol class="steps" role="list">
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">1</span>
-            <div class="step__body">
-              <h3>Export your schema as a .sql file</h3>
-              <p>Pick your database and run the command. Replace <code>USER</code> and <code>DATABASE</code> with your own values.</p>
-
-              <div class="tabs" data-tabs>
-                <div class="tablist" role="tablist" aria-label="Database engine">
-                  <button class="tab" type="button" role="tab" id="tab-mysql" aria-controls="panel-mysql" aria-selected="true">MySQL / MariaDB</button>
-                  <button class="tab" type="button" role="tab" id="tab-pg" aria-controls="panel-pg" aria-selected="false" tabindex="-1">PostgreSQL</button>
-                  <button class="tab" type="button" role="tab" id="tab-mssql" aria-controls="panel-mssql" aria-selected="false" tabindex="-1">SQL Server</button>
-                  <button class="tab" type="button" role="tab" id="tab-sqlite" aria-controls="panel-sqlite" aria-selected="false" tabindex="-1">SQLite</button>
-                </div>
-
-                <div class="tabpanel is-active" role="tabpanel" id="panel-mysql" aria-labelledby="tab-mysql" tabindex="0">
-                  <p class="no-js-label">MySQL / MariaDB</p>
-                  <div class="code">
-                    <pre><code>mysqldump --no-data -u USER -p DATABASE &gt; schema.sql</code></pre>
-                    <button class="copy-btn" type="button" data-copy aria-label="Copy the MySQL command">
-                      <svg class="icon icon--copy" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>
-                      <svg class="icon icon--check" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-                      <span data-copy-label>Copy</span>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="tabpanel" role="tabpanel" id="panel-pg" aria-labelledby="tab-pg" tabindex="0">
-                  <p class="no-js-label">PostgreSQL</p>
-                  <div class="code">
-                    <pre><code>pg_dump --schema-only -U USER DATABASE &gt; schema.sql</code></pre>
-                    <button class="copy-btn" type="button" data-copy aria-label="Copy the PostgreSQL command">
-                      <svg class="icon icon--copy" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>
-                      <svg class="icon icon--check" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-                      <span data-copy-label>Copy</span>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="tabpanel" role="tabpanel" id="panel-mssql" aria-labelledby="tab-mssql" tabindex="0">
-                  <p class="no-js-label">SQL Server</p>
-                  <ol class="ssms">
-                    <li><span>In SSMS, right-click the database.</span></li>
-                    <li><span>Choose <span class="menu-path">Tasks</span> → <span class="menu-path">Generate Scripts</span>.</span></li>
-                    <li><span>Choose the tables.</span></li>
-                    <li><span>Open <span class="menu-path">Advanced</span> and set “Types of data to script” to <span class="menu-path">Schema only</span>.</span></li>
-                    <li><span>Save as <code>schema.sql</code>.</span></li>
-                  </ol>
-                </div>
-
-                <div class="tabpanel" role="tabpanel" id="panel-sqlite" aria-labelledby="tab-sqlite" tabindex="0">
-                  <p class="no-js-label">SQLite</p>
-                  <div class="code">
-                    <pre><code>sqlite3 my.db .schema &gt; schema.sql</code></pre>
-                    <button class="copy-btn" type="button" data-copy aria-label="Copy the SQLite command">
-                      <svg class="icon icon--copy" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>
-                      <svg class="icon icon--check" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-                      <span data-copy-label>Copy</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <p class="note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg><span>A full dump with data also works. SchemaZone reads only the table definitions and skips the rows.</span></p>
-            </div>
-          </li>
-
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">2</span>
-            <div class="step__body">
-              <h3>Open your Zone</h3>
-              <p>Go to <a href="/schemazone/">hasanradi93.github.io/schemazone/</a> and choose “New Zone”.</p>
-              <div class="step-visual addr" aria-hidden="true">
-                <span class="addr__url"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>hasanradi93.github.io/schemazone/</span>
-                <span class="addr__btn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>New Zone</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">3</span>
-            <div class="step__body">
-              <h3>Drop your .sql file</h3>
-              <p>Drop it onto the drop area, or click to choose it. It's read on your own computer and nothing is uploaded.</p>
-              <div class="step-visual dropzone" aria-hidden="true" data-inview>
-                <span class="dropzone__file"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>schema.sql</span>
-                <span>Drop your .sql file here, or click to choose</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">4</span>
-            <div class="step__body">
-              <h3>Explore, edit and export</h3>
-              <p>Your tables and relationships appear as a diagram. Drag, focus, edit, then export as .sql or .json. The Zone is saved in this browser, so you can come back to it.</p>
-              <ul class="toolset" aria-label="What you can do in your Zone">
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-move"/></svg>Drag</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"/></svg>Focus</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>Search</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-edit"/></svg>Edit</li>
-                <li class="is-export"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export .sql</li>
-                <li class="is-export"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>Export .json</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-
-        <div class="faq reveal">
-          <h3 id="faq-title">Questions about your .sql file</h3>
-          <details>
-            <summary>Is my file uploaded? <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
-            <p class="faq__a">No. SchemaZone reads the file inside your browser. It never leaves your computer.</p>
-          </details>
-          <details>
-            <summary>What size of file works? <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
-            <p class="faq__a">SchemaZone has been tested with large schemas. Files under 20 MB work best.</p>
-          </details>
-          <details>
-            <summary>What if some statements are skipped? <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
-            <p class="faq__a">SchemaZone shows a report of anything it skipped.</p>
-          </details>
-          <details>
-            <summary>Can I move my Zone to another computer? <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
-            <p class="faq__a">Yes. Export it as a .json Zone file and open it there.</p>
-          </details>
-          <details>
-            <summary>Does it need the rows in my tables? <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary>
-            <p class="faq__a">No. A schema-only export is enough. A full dump with data also works; SchemaZone reads only the table definitions and skips the rows.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="section section--alt" aria-labelledby="pricing-title">
-      <div class="container">
-        <header class="section-head section-head--center reveal">
-          <p class="eyebrow">Pricing</p>
-          <h2 id="pricing-title">Start free. Grow when you are ready.</h2>
-          <p>DataPilot AI has a free plan and two paid plans. SchemaZone is free to try in your browser. SQLNext pricing comes at launch.</p>
-        </header>
-
-        <div class="pricing__group reveal accent-dp">
-          <span class="tile tile--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></span>
-          <h3>DataPilot AI plans</h3>
-        </div>
-
-        <ul class="plans">
-          <li class="reveal" style="--d: 0s">
-            <article class="plan accent-dp" aria-labelledby="plan-free">
-              <div class="plan__head"><h4 id="plan-free">Free</h4></div>
-              <p class="plan__price"><span class="plan__amount">$0</span></p>
-              <ul class="mini-list">
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Up to 3 user accounts</li>
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Free download for Windows</li>
-              </ul>
-              <a class="btn btn--dp btn--block" href="https://github.com/hasanradi93/datapilot/releases/latest/download/DataPilotAI-Setup.exe"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg> Download Free</a>
-            </article>
-          </li>
-          <li class="reveal" style="--d: 0.1s">
-            <article class="plan plan--featured accent-sq" aria-labelledby="plan-pro">
-              <div class="plan__head"><h4 id="plan-pro">Pro</h4></div>
-              <p class="plan__price"><span class="plan__amount">$49</span><span class="plan__per">per month</span></p>
-              <p class="plan__alt">or $490 per year</p>
-              <ul class="mini-list">
-                <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Per company</li>
-              </ul>
-              <a class="btn btn--primary btn--block" href="mailto:hassan93radi@gmail.com?subject=DataPilot%20Pro" data-buy="DataPilot Pro"><span data-buy-label>Contact us to buy</span><span class="visually-hidden"> DataPilot Pro</span> <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-            </article>
-          </li>
-          <li class="reveal" style="--d: 0.2s">
-            <article class="plan accent-dp" aria-labelledby="plan-ent">
-              <div class="plan__head"><h4 id="plan-ent">Enterprise</h4></div>
-              <p class="plan__price"><span class="plan__from">from</span><span class="plan__amount">$149</span><span class="plan__per">per month</span></p>
-              <p class="plan__alt">Quoted for your company</p>
-              <a class="btn btn--ghost btn--block" href="mailto:hassan93radi@gmail.com?subject=DataPilot%20Enterprise" data-buy="DataPilot Enterprise"><span data-buy-label>Contact us to buy</span><span class="visually-hidden"> DataPilot Enterprise</span> <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
-            </article>
-          </li>
-        </ul>
-
-        <div class="pricing__others">
-          <article class="plan accent-sq reveal" aria-labelledby="plan-sqlnext">
-            <div class="plan__head">
-              <h3 id="plan-sqlnext">SQLNext</h3>
-              <span class="badge badge--sq">Early access</span>
-            </div>
-            <p class="plan__statement">Pricing announced at launch</p>
-            <p class="plan__alt">In development. Ask to join early access.</p>
-            <a class="btn btn--sq" href="mailto:hassan93radi@gmail.com?subject=SQLNext%20early%20access"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg> Ask for early access</a>
+        <div class="doors">
+          <article class="door door--bots" aria-labelledby="door-bots">
+            <span class="door__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-chat"/></svg></span>
+            <h2 id="door-bots"><a href="/razov-bots/">Razov Bots</a></h2>
+            <p class="door__text">AI assistants that answer, book and sell on Telegram.</p>
+            <ul class="door__list">
+              <li><span>Answer customers in <strong>Arabic, English and French</strong></span></li>
+              <li><span>Book appointments and take orders</span></li>
+              <li><span>Tell your team about each one</span></li>
+            </ul>
+            <p class="door__go" aria-hidden="true">Open Razov Bots <svg class="icon" focusable="false"><use href="#i-arrow"/></svg></p>
+            <p class="door__path">hasanradi93.github.io/razov-bots/</p>
           </article>
-          <article class="plan accent-sz reveal" style="--d: 0.1s" aria-labelledby="plan-schemazone">
-            <div class="plan__head">
-              <h3 id="plan-schemazone">SchemaZone</h3>
-              <span class="badge badge--sz badge--live">Live</span>
-            </div>
-            <p class="plan__statement">Try free in your browser</p>
-            <p class="plan__alt">Runs in your browser. Your file is never uploaded.</p>
-            <a class="btn btn--sz" href="/schemazone/">Open SchemaZone <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+
+          <article class="door door--db" aria-labelledby="door-db">
+            <span class="door__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-db"/></svg></span>
+            <h2 id="door-db"><a href="/razov-db/">Razov DB</a></h2>
+            <p class="door__text">Database tools that ask, convert and design.</p>
+            <ul class="door__list">
+              <li><span><strong>DataPilot AI</strong>: ask your database questions in plain words</span></li>
+              <li><span><strong>SchemaZone</strong>: see a .sql file as an ER diagram, in your browser</span></li>
+              <li><span><strong>SQLNext</strong>: move a database to the next version or engine (coming soon)</span></li>
+            </ul>
+            <p class="door__go" aria-hidden="true">Open Razov DB <svg class="icon" focusable="false"><use href="#i-arrow"/></svg></p>
+            <p class="door__path">hasanradi93.github.io/razov-db/</p>
           </article>
         </div>
-
-        <div class="store-cta" data-store-link hidden>
-          <p>Buy licences online in the RAZOV.tech store.</p>
-          <a class="btn btn--primary" href="#pricing" data-store-href>Open the store <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg></a>
-        </div>
-
-        <p class="pricing__fine reveal">DataPilot AI Pro is priced per company. Enterprise is quoted for each company.</p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <div class="section-glow" style="--gx: 15%; --gy: 50%" aria-hidden="true"></div>
-      <div class="container contact">
-        <div class="contact__intro reveal">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Talk to us about your database.</h2>
-          <p>Questions about a product, a quote for DataPilot AI Enterprise, or early access to SQLNext? Send an email.</p>
-        </div>
-        <ul class="contact__cards">
-          <li class="contact__row reveal">
-            <a class="contact-card accent-dp" href="mailto:hassan93radi@gmail.com">
-              <span class="tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
-              <span class="contact-card__text">
-                <span class="contact-card__label">Email</span>
-                <span class="contact-card__value">hassan93radi@gmail.com</span>
-              </span>
-              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-            </a>
-            <button class="copy-btn copy-btn--theme" type="button" data-copy data-copy-text="hassan93radi@gmail.com" aria-label="Copy the email address">
-              <svg class="icon icon--copy" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>
-              <svg class="icon icon--check" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-              <span data-copy-label>Copy</span>
-            </button>
-          </li>
-          <li class="contact__row reveal" style="--d: 0.1s">
-            <a class="contact-card accent-sq" href="https://github.com/hasanradi93">
-              <span class="tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg></span>
-              <span class="contact-card__text">
-                <span class="contact-card__label">GitHub</span>
-                <span class="contact-card__value">github.com/hasanradi93</span>
-              </span>
-              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
-            </a>
-          </li>
-        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a class="brand" href="#top">
-          <img src="assets/img/logo-mark.svg" width="36" height="36" alt="" loading="lazy">
-          <span>RAZOV<span class="brand__tld">.tech</span> <span class="brand__sub">solutions</span></span>
-        </a>
-        <p>Database solutions that ask, convert and design.</p>
-      </div>
-      <nav aria-label="Products">
-        <h2 class="footer__title">Products</h2>
-        <ul>
-          <li><a href="/datapilot/">DataPilot AI</a></li>
-          <li><span class="pending" data-link-pending="/sqlnext/">SQLNext <small>coming soon</small></span></li>
-          <li><a href="/schemazone/">SchemaZone</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h2 class="footer__title">Company</h2>
-        <ul>
-          <li><a href="#upload">Upload .sql</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://github.com/hasanradi93">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
+  <footer class="site-footer site-footer--slim">
     <div class="container footer__bottom">
-      <p>© 2026 RAZOV.tech solutions</p>
-      <p class="footer__family"><span class="footer__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>DataPilot AI, SQLNext and SchemaZone are part of <strong>RAZOV.tech solutions</strong></span></p>
+      <p>© 2026 RAZOV.tech</p>
+      <p><a href="https://github.com/hasanradi93">GitHub</a></p>
     </div>
     <nav class="container footer__legal" aria-label="Legal">
-      <a href="/legal.html#terms">Terms</a>
-      <a href="/legal.html#privacy">Privacy</a>
-      <a href="/legal.html#refunds">Refunds</a>
+      <a href="/razov-db/legal.html#terms">Terms</a>
+      <a href="/razov-db/legal.html#privacy">Privacy</a>
+      <a href="/razov-db/legal.html#refunds">Refunds</a>
       <a href="mailto:hassan93radi@gmail.com">hassan93radi@gmail.com</a>
     </nav>
   </footer>
-
   <p class="visually-hidden" role="status" aria-live="polite" data-live></p>
 </body>
 </html>

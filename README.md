@@ -1,65 +1,47 @@
-# RAZOV.tech solutions website
+# RAZOV hub
 
-The company website for **RAZOV.tech solutions**, published with GitHub Pages at
-<https://hasanradi93.github.io/>. It presents the three database products:
+The root page of <https://hasanradi93.github.io/>, published with GitHub Pages. It is one simple page with two
+doors:
 
-- **DataPilot AI**: ask your company's database questions in plain words.
-- **SQLNext**: convert databases between versions and engines, with every change explained.
-- **SchemaZone**: see a `.sql` file as an interactive ER diagram, in your browser.
+- **Razov Bots**: <https://hasanradi93.github.io/razov-bots/>, AI assistants that answer, book and sell on
+  Telegram. Its own repo `hasanradi93/razov-bots`; nothing here changes it.
+- **Razov DB**: <https://hasanradi93.github.io/razov-db/>, the database products DataPilot AI, SchemaZone and
+  SQLNext. Its own repo `hasanradi93/razov-db`.
+
+Until 2026-11-25 this repo held the database site itself. Its history continues in `razov-db`.
 
 ## What is in the repo
 
-Plain static files with no framework, build step or npm:
-
 | Path | Purpose |
 | --- | --- |
-| `index.html` | The one-page site |
-| `404.html` | Not-found page served by GitHub Pages |
-| `assets/css/base.css` | Design tokens (dark and light), layout, header, buttons, footer |
-| `assets/css/sections.css` | Hero, products, sketches, how-to, pricing, contact |
-| `assets/js/site.js` | Theme toggle, mobile menu, reveals, tabs, copy buttons, store link |
-| `assets/js/hero-network.js` | The animated database network on the hero canvas |
-| `assets/img/` | Logo mark and social images |
-| `legal.html` | Terms, privacy and refunds for the company (linked in every footer) |
-| `schemazone/` | The built SchemaZone app; do not edit by hand |
+| `index.html` | The hub page |
+| `404.html` | Not-found page for paths that no project repo serves (uses `/...` paths on purpose) |
+| `legal.html` | Forwarder to `/razov-db/legal.html`; keeps `#terms`, `#privacy`, `#refunds` |
+| `schemazone/index.html` | Forwarder to `/razov-db/schemazone/`; keeps the `#/zone/<id>` hash |
+| `assets/css/base.css` | Design tokens (dark and light), header, buttons, footer (same as in razov-db) |
+| `assets/css/hub.css` | Hub layout, the two doors, slim footer, forwarder pages |
+| `assets/js/site.js` | Theme toggle (a copy of razov-db's file; the store switches there do nothing here) |
+| `assets/js/hero-network.js` | The animated network behind the hub |
+| `robots.txt` | The only robots file crawlers read; lists the sitemaps of `/`, `/razov-db/`, `/razov-bots/` |
+| `sitemap.xml` | Lists `/` only; each project repo has its own sitemap |
 
-`/datapilot/` and `/sqlnext/` are served by their own public repositories (`hasanradi93/datapilot`, and later
-`hasanradi93/sqlnext`). Never add folders with those names here.
+The legal links in the footer go to `/razov-db/legal.html`.
 
-## Updating SchemaZone
+## Rules
 
-The source is in the private repo `hasanradi93/schemazone`. To publish a new version:
-
-```sh
-cd ../SchemaZone && npm test && npm run build:site
-rm -rf ../razov-site/schemazone && mkdir ../razov-site/schemazone && cp -r dist/* ../razov-site/schemazone/
-```
-
-Then commit and push this repo.
+- Never add folders named `razov-db`, `razov-bots`, `datapilot` or `sqlnext` here. A project repo of the same
+  name serves that path, and a folder here would clash with it.
+- Never create public repos named `schemazone` or `legal`. `/schemazone/` is a forwarder folder here.
+- Saved SchemaZone Zones live in the browser's localStorage for `hasanradi93.github.io`, so they survive the
+  move from `/schemazone/` to `/razov-db/schemazone/`.
 
 ## Preview locally
 
+From the parent folder that holds both `razov-site` and `razov-db`:
+
 ```sh
-python -m http.server 8077
+python -m http.server 8078
 ```
 
-Then open <http://localhost:8077/>. Links to `/datapilot/` and `/schemazone/`
-only work on the live site.
-
-## Switching things on later
-
-- **Store:** set `STORE_URL` at the top of `assets/js/site.js` to an `https://` URL.
-  The store button appears and the paid DataPilot plans change from
-  "Contact us to buy" to "Buy".
-- **SQLNext product page:** add `'/sqlnext/'` to `LIVE_PENDING_LINKS` in
-  `assets/js/site.js`. Every element with `data-link-pending="/sqlnext/"`
-  turns into a real link.
-
-## Notes for editors
-
-- Colours, fonts and spacing are CSS custom properties at the top of
-  `assets/css/base.css`, with a dark set (default) and a light set.
-- Sections inside `<main>` use `content-visibility: auto` so the first paint
-  stays fast. Same-page links render everything first, so jumps stay exact.
-- Product visuals are illustrative SVG/CSS sketches, not screenshots.
-- Animations stop when `prefers-reduced-motion: reduce` is set.
+Then open <http://localhost:8078/razov-site/>. The Razov DB door and the forwarders work there, because
+`/razov-db/` exists in that folder. The Razov Bots door works only on the live site.
