@@ -1205,6 +1205,7 @@
   color: var(--sz);
   font-weight: 600;
   text-underline-offset: 3px;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 599.98px) {
