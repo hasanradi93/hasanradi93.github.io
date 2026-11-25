@@ -30,7 +30,7 @@ Live check, 2026-11-25:
 
 ## Switches for later
 
-- **Paddle store live:** set `STORE_URL` in `assets/js/site.js`.
+- **Paddle store live:** set `STORE_URL` in `assets/js/site.js` to `https://hasanradi93.github.io/datapilot/#pricing`, where the DataPilot page opens the Paddle checkout. Do this only once checkout works, because the setting also shows "Buy" and an online-store banner.
 - **SQLNext page live:** add `'/sqlnext/'` to `LIVE_PENDING_LINKS` in `assets/js/site.js`.
 - **New SchemaZone version:** rebuild it and copy it into `schemazone/`.
 
