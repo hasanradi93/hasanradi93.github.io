@@ -32,7 +32,7 @@ Sites of DBs Apps seperated udner on name site after https://hasanradi93.github.
 | 8 | Root turned into the hub; old SchemaZone build, sections.css and og-image removed; 404 rewritten | done 2026-11-25 |
 | 9 | Forwarders `/schemazone/` and `/legal.html` keep the hash (checked locally: a saved Zone opened from the old link) | done 2026-11-25 |
 | 10 | robots.txt lists the sitemaps of `/`, `/razov-db/` and `/razov-bots/` | done 2026-11-25 |
-| 11 | Push and live check | see below |
+| 11 | Push and live check (542f8f9): /, /legal.html, /schemazone/, robots, sitemap 200; unknown path gives the hub 404; doors and legal links checked in Chrome; no console messages | done 2026-11-25 |
 
 ## Open points for the owner
 
