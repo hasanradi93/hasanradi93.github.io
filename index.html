@@ -26,17 +26,12 @@
   <meta name="twitter:image" content="https://hasanradi93.github.io/assets/img/og-image.png">
   <meta name="twitter:image:alt" content="RAZOV.tech solutions logo with the words: database solutions that ask, convert and design.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"></noscript>
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/sections.css">
-
+  <!-- Theme first: an inline script placed after the stylesheets would wait for them and block parsing. -->
   <script>
     (function () {
       var root = document.documentElement;
       root.classList.add('js');
+      if (location.hash) root.classList.add('render-all');
       var theme = null;
       try { theme = localStorage.getItem('razov-theme'); } catch (e) { theme = null; }
       if (theme !== 'light' && theme !== 'dark') {
@@ -45,6 +40,13 @@
       root.setAttribute('data-theme', theme);
     })();
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+
   <script src="assets/js/site.js" defer></script>
   <script src="assets/js/hero-network.js" defer></script>
 
@@ -140,7 +142,7 @@
           <p class="hero__lead">One family of tools for the databases you already have. <strong>DataPilot</strong> asks your data, <strong>SQLNext</strong> moves your database to the next version or engine, and <strong>SchemaZone</strong> designs and maps your database.</p>
           <p class="typing" aria-hidden="true">
             <span class="typing__prompt">&rsaquo;</span>
-            <span class="typing__text"><span data-typing data-phrases='["DataPilot asks your data.","SQLNext moves it to the next version.","SchemaZone designs and maps it."]'>DataPilot asks your data.</span><span class="typing__caret"></span></span>
+            <span class="typing__text"><span data-typing data-phrases='["DataPilot asks your data.","SQLNext moves it to the next version.","SchemaZone designs and maps it."]'>DataPilot asks your data.</span></span>
           </p>
           <div class="hero__ctas">
             <a class="btn btn--primary" href="#products">Explore the products <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>

@@ -67,10 +67,11 @@
     pulses = [];
   }
 
-  function resize() {
-    var rect = host.getBoundingClientRect();
-    var nextW = Math.max(1, Math.round(rect.width));
-    var nextH = Math.max(1, Math.round(rect.height));
+  // Sizes come from a ResizeObserver entry (measured after layout), so this
+  // never forces a synchronous reflow.
+  function resize(boxWidth, boxHeight) {
+    var nextW = Math.max(1, Math.round(boxWidth));
+    var nextH = Math.max(1, Math.round(boxHeight));
     dpr = Math.min(2, window.devicePixelRatio || 1);
     var changed = nextW !== width || nextH !== height;
     var scaleX = width ? nextW / width : 1;
@@ -255,7 +256,7 @@
   }
 
   function schedule() {
-    if (!raf && shouldRun()) raf = window.requestAnimationFrame(frame);
+    if (!raf && palette && shouldRun()) raf = window.requestAnimationFrame(frame);
   }
 
   function stop() {
@@ -273,6 +274,7 @@
   }
 
   function refresh() {
+    if (!palette) return;
     if (shouldRun()) {
       schedule();
     } else {
@@ -281,23 +283,35 @@
     }
   }
 
-  function start() {
-    readPalette();
-    resize();
+  function redraw() {
+    if (raf) return;
     if (reduceMotion.matches) drawStatic(); else draw();
-    canvas.classList.add('is-ready');
-    refresh();
+  }
 
+  function applySize(boxWidth, boxHeight) {
+    var first = !palette;
+    if (first) readPalette();
+    resize(boxWidth, boxHeight);
+    redraw();
+    if (first) {
+      canvas.classList.add('is-ready');
+      refresh();
+    }
+  }
+
+  function start() {
+    // The canvas fills the hero (CSS 100% x 100%), so observing the canvas gives
+    // the hero size. Changing canvas.width/height only resizes the bitmap.
     if ('ResizeObserver' in window) {
-      var pendingResize = 0;
-      new ResizeObserver(function () {
-        if (pendingResize) return;
-        pendingResize = window.requestAnimationFrame(function () {
-          pendingResize = 0;
-          resize();
-          if (!raf) { if (reduceMotion.matches) drawStatic(); else draw(); }
-        });
-      }).observe(host);
+      new ResizeObserver(function (entries) {
+        var box = entries[entries.length - 1].contentRect;
+        applySize(box.width, box.height);
+      }).observe(canvas);
+    } else {
+      window.requestAnimationFrame(function () {
+        var rect = canvas.getBoundingClientRect();
+        applySize(rect.width, rect.height);
+      });
     }
 
     if ('IntersectionObserver' in window) {
@@ -311,8 +325,9 @@
     if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', refresh);
 
     document.addEventListener('razov:themechange', function () {
+      if (!palette) return;
       readPalette();
-      if (!raf) { if (reduceMotion.matches) drawStatic(); else draw(); }
+      redraw();
     });
 
     if (finePointer.matches) {

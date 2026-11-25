@@ -3,6 +3,40 @@
    head script from localStorage or prefers-color-scheme) and, without JS,
    from the prefers-color-scheme media query. */
 
+/* ---------- Metric-matched fallback fonts ----------
+   Local Arial, resized to the width and vertical metrics of Inter and
+   Space Grotesk (measured in Chrome), so the swap to the Google Fonts
+   barely moves any text and does not cause a layout shift. */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial"), local("ArialMT");
+  font-weight: 100 500;
+  size-adjust: 106.4%;
+  ascent-override: 91%;
+  descent-override: 22.7%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT");
+  font-weight: 600 900;
+  size-adjust: 102%;
+  ascent-override: 95%;
+  descent-override: 23.7%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Space Grotesk Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT");
+  font-weight: 100 900;
+  size-adjust: 102.5%;
+  ascent-override: 95.6%;
+  descent-override: 28.3%;
+  line-gap-override: 0%;
+}
+
 /* ---------- Tokens ---------- */
 :root {
   color-scheme: dark;
@@ -41,8 +75,8 @@
   --grad: linear-gradient(100deg, var(--dp), var(--sq) 52%, var(--sz));
   --grad-loop: linear-gradient(90deg, var(--dp), var(--sq), var(--sz), var(--sq), var(--dp));
 
-  --font-head: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-head: "Space Grotesk", "Space Grotesk Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Inter", "Inter Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
 
   --gutter: clamp(16px, 4vw, 40px);
@@ -284,6 +318,21 @@ button {
 
 .section--alt {
   background: var(--bg-alt);
+}
+
+/* Below-the-fold sections skip rendering work until they come near the
+   viewport. "auto" in contain-intrinsic-size remembers each real height. */
+main > .section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1000px;
+}
+
+/* Before an in-page jump everything is rendered, so the target position is
+   exact (site.js adds this class on link clicks and for a hash at load). */
+.render-all main > .section,
+.render-all .site-footer {
+  content-visibility: visible;
 }
 
 .section-head {
@@ -752,7 +801,7 @@ button {
 .site-footer::before {
   content: "";
   position: absolute;
-  inset: -1px 0 auto;
+  inset: 0 0 auto;
   height: 1px;
   background: var(--grad);
   opacity: 0.6;

@@ -126,7 +126,7 @@ const LIVE_PENDING_LINKS = [];
     var onScroll = function () {
       header.classList.toggle('is-scrolled', window.scrollY > 8);
     };
-    onScroll();
+    window.requestAnimationFrame(onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
 
     if (!('IntersectionObserver' in window)) return;
@@ -146,6 +146,26 @@ const LIVE_PENDING_LINKS = [];
     }, { rootMargin: '-45% 0px -50% 0px' });
 
     $all('main > section[id]').forEach(function (section) { observer.observe(section); });
+  }
+
+  /* ---------- Exact in-page jumps ----------
+     Sections use content-visibility: auto, so their heights are estimates
+     until they render. Render everything before a same-page jump so the
+     smooth scroll lands on the real position. */
+  function initRenderAll() {
+    function renderAll() {
+      root.classList.add('render-all');
+      document.removeEventListener('click', onClick, true);
+    }
+    function onClick(event) {
+      var link = event.target.closest && event.target.closest('a[href*="#"]');
+      if (!link) return;
+      var url = new URL(link.href, location.href);
+      if (url.pathname === location.pathname && url.hash) renderAll();
+    }
+    if (root.classList.contains('render-all')) return;
+    document.addEventListener('click', onClick, true);
+    window.addEventListener('hashchange', renderAll);
   }
 
   /* ---------- Scroll reveal and in-view state ---------- */
@@ -424,6 +444,7 @@ const LIVE_PENDING_LINKS = [];
 
   function init() {
     initTheme();
+    initRenderAll();
     initMenu();
     initHeaderState();
     initReveal();

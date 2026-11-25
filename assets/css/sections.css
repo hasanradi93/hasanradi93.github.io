@@ -122,24 +122,21 @@
   min-width: 0;
 }
 
-.typing__caret {
-  display: inline-block;
-  width: 8px;
-  height: 1.15em;
-  margin-left: 2px;
-  vertical-align: -0.18em;
-  background: var(--dp);
-  border-radius: 2px;
+/* The caret is the typed span's right border: it grows with the text instead
+   of moving, so typing never counts as a layout shift. */
+.typing [data-typing] {
+  padding-right: 2px;
+  border-right: 8px solid var(--dp);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .typing__caret {
+  .typing [data-typing] {
     animation: blink 1.05s steps(1) infinite;
   }
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% { border-right-color: transparent; }
 }
 
 @media (max-width: 479.98px) {
@@ -404,7 +401,8 @@
     align-items: start;
   }
 
-  .detail__visual {
+  /* Two classes so it wins over .sketch { position: relative }. */
+  .detail > .detail__visual {
     position: sticky;
     top: calc(var(--header-h) + 40px);
   }
