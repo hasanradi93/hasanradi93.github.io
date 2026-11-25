@@ -20,9 +20,22 @@ Plain static files with no framework, build step or npm:
 | `assets/js/site.js` | Theme toggle, mobile menu, reveals, tabs, copy buttons, store link |
 | `assets/js/hero-network.js` | The animated database network on the hero canvas |
 | `assets/img/` | Logo mark and social images |
+| `legal.html` | Terms, privacy and refunds for the company (linked in every footer) |
+| `schemazone/` | The built SchemaZone app; do not edit by hand |
 
-Do not add top-level folders named `datapilot/`, `sqlnext/` or `schemazone/`.
-Those paths are served by other repositories or a later build.
+`/datapilot/` and `/sqlnext/` are served by their own public repositories (`hasanradi93/datapilot`, and later
+`hasanradi93/sqlnext`). Never add folders with those names here.
+
+## Updating SchemaZone
+
+The source is in the private repo `hasanradi93/schemazone`. To publish a new version:
+
+```sh
+cd ../SchemaZone && npm test && npm run build:site
+rm -rf ../razov-site/schemazone && mkdir ../razov-site/schemazone && cp -r dist/* ../razov-site/schemazone/
+```
+
+Then commit and push this repo.
 
 ## Preview locally
 

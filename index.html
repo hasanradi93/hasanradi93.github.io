@@ -255,7 +255,7 @@
             <a class="btn btn--dp" href="https://github.com/hasanradi93/datapilot/releases/latest/download/DataPilotAI-Setup.exe"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg> Download Free</a>
             <a class="btn btn--ghost" href="/datapilot/">Product page <svg class="icon icon--nudge" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
           </div>
-          <p class="detail__note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-monitor"/></svg> Windows installer (.exe) from GitHub releases.</p>
+          <p class="detail__note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-monitor"/></svg> Windows 10 or 11 (64-bit) installer from GitHub releases.</p>
         </div>
 
         <figure class="detail__visual sketch reveal" style="--d: 0.1s">
@@ -361,21 +361,21 @@
               <div class="files">
                 <span class="file"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>dump-5.1.sql <em>original, unchanged</em></span>
                 <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-                <span class="file file--new"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>dump-8.0.sql <em>new copy</em></span>
+                <span class="file file--new"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>dump-8.4.sql <em>new copy</em></span>
               </div>
               <div class="change">
                 <div class="change__row change__row--old">
                   <span class="change__label">Original</span>
                   <span class="change__sign">−</span>
-                  <span>`created` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00'</span>
+                  <span>CREATE DEFINER=`legacy_app`@`%` VIEW `v_top_customers` AS …</span>
                 </div>
                 <div class="change__row change__row--new">
                   <span class="change__label">Converted</span>
                   <span class="change__sign">+</span>
-                  <span>`created` DATETIME NULL DEFAULT NULL</span>
+                  <span>CREATE VIEW `v_top_customers` AS …</span>
                 </div>
                 <dl class="change__meta">
-                  <div><dt>Reason</dt><dd>Zero dates are rejected by the default SQL mode of MySQL 8.0.</dd></div>
+                  <div><dt>Reason</dt><dd>The owner account does not exist on the new server, which would refuse the view (error 1449).</dd></div>
                   <div><dt>Severity</dt><dd><span class="sev">High</span></dd></div>
                   <div><dt>Confidence</dt><dd><span class="conf">High</span></dd></div>
                 </dl>
@@ -799,6 +799,12 @@
       <p>© 2026 RAZOV.tech solutions</p>
       <p class="footer__family"><span class="footer__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>DataPilot AI, SQLNext and SchemaZone are part of <strong>RAZOV.tech solutions</strong></span></p>
     </div>
+    <nav class="container footer__legal" aria-label="Legal">
+      <a href="/legal.html#terms">Terms</a>
+      <a href="/legal.html#privacy">Privacy</a>
+      <a href="/legal.html#refunds">Refunds</a>
+      <a href="mailto:hassan93radi@gmail.com">hassan93radi@gmail.com</a>
+    </nav>
   </footer>
 
   <p class="visually-hidden" role="status" aria-live="polite" data-live></p>
