@@ -592,7 +592,6 @@ button {
 }
 
 .brand__sub {
-  margin-left: 4px;
   color: var(--text-muted);
   font-weight: 500;
 }
@@ -703,9 +702,8 @@ button {
     right: 0;
     padding: 8px var(--gutter) 20px;
     border-bottom: 1px solid var(--border);
-    background: var(--surface-glass);
-    -webkit-backdrop-filter: saturate(160%) blur(16px);
-    backdrop-filter: saturate(160%) blur(16px);
+    /* Solid: a backdrop-filter nested in the header's own backdrop cannot blur the page. */
+    background: var(--bg);
     box-shadow: var(--shadow-lg);
     visibility: hidden;
     opacity: 0;
@@ -735,7 +733,7 @@ button {
   }
 }
 
-@media (max-width: 379.98px) {
+@media (max-width: 339.98px) {
   .brand__sub {
     display: none;
   }

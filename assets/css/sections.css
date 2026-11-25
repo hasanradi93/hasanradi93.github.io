@@ -95,7 +95,7 @@
 
 .typing {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   width: min(100%, 520px);
   height: 48px;
@@ -198,9 +198,34 @@
 /* ---------- Products overview ---------- */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 20px;
   list-style: none;
+}
+
+/* Three cards: 1 column on phones, 2 + 1 full-width on tablets, 3 on desktop. */
+@media (min-width: 640px) {
+  .products-grid,
+  .plans.plans {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .products-grid > li:last-child:nth-child(odd),
+  .plans > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 960px) {
+  .products-grid,
+  .plans.plans {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .products-grid > li:last-child:nth-child(odd),
+  .plans > li:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
 }
 
 .products-grid > li {
@@ -1234,6 +1259,24 @@
   color: var(--text);
 }
 
+@media (max-width: 599.98px) {
+  .tablist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tab {
+    padding: 8px 8px;
+    font-size: 0.88rem;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .step__body {
+    padding: 18px 16px;
+  }
+}
+
 .tab[aria-selected="true"] {
   background: var(--surface);
   color: var(--text);
@@ -1604,7 +1647,7 @@
 
 .plans {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 20px;
   list-style: none;
 }
