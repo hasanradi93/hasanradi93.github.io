@@ -3,47 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RAZOV.tech | Razov Bots and Razov DB</title>
-  <meta name="description" content="RAZOV.tech makes AI assistants that answer, book and sell on Telegram (Razov Bots), and database tools that ask, convert and design (Razov DB: DataPilot AI, SchemaZone and SQLNext).">
+  <title>RAZOV.tech solutions | Razov Bots and Razov DB</title>
+  <meta name="description" content="RAZOV.tech solutions makes AI assistants that answer, book and sell on Telegram (Razov Bots), and database tools that ask, convert and design (Razov DB: DataPilot AI, SchemaZone and SQLNext).">
   <link rel="canonical" href="https://hasanradi93.github.io/">
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#060a13">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111214">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="RAZOV.tech">
-  <meta property="og:title" content="RAZOV.tech: Razov Bots and Razov DB">
+  <meta property="og:site_name" content="RAZOV.tech solutions">
+  <meta property="og:title" content="RAZOV.tech solutions: Razov Bots and Razov DB">
   <meta property="og:description" content="AI assistants that answer, book and sell on Telegram, and database tools that ask, convert and design.">
   <meta property="og:url" content="https://hasanradi93.github.io/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="RAZOV.tech: Razov Bots and Razov DB">
+  <meta name="twitter:title" content="RAZOV.tech solutions: Razov Bots and Razov DB">
   <meta name="twitter:description" content="AI assistants that answer, book and sell on Telegram, and database tools that ask, convert and design.">
-  <!-- Theme first: an inline script placed after the stylesheets would wait for them and block parsing. -->
-  <script>
-    (function () {
-      var root = document.documentElement;
-      root.classList.add('js');
-      var theme = null;
-      try { theme = localStorage.getItem('razov-theme'); } catch (e) { theme = null; }
-      if (theme !== 'light' && theme !== 'dark') {
-        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      }
-      root.setAttribute('data-theme', theme);
-    })();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"></noscript>
+  <link rel="preload" href="assets/fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/readex-pro-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/hub.css">
-  <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/hero-network.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "RAZOV.tech",
+      "name": "RAZOV.tech solutions",
       "url": "https://hasanradi93.github.io/",
       "logo": "https://hasanradi93.github.io/assets/img/logo-mark.svg",
       "email": "hassan93radi@gmail.com",
@@ -51,87 +34,84 @@
     }
   </script>
 </head>
-<body>
+<body class="hub-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="star" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2 20.09 6.11 25.9 6.1 25.89 11.91 30 16 25.89 20.09 25.9 25.9 20.09 25.89 16 30 11.91 25.89 6.1 25.9 6.11 20.09 2 16 6.11 11.91 6.1 6.1 11.91 6.11Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.6A8 8 0 0 1 9.4 4a8 8 0 1 0 10.6 10.6z"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path d="M8.5 10h7M8.5 7h4"/></symbol>
-    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></symbol>
   </svg>
 
-  <header class="site-header" data-header>
-    <div class="container header__inner">
-      <a class="brand" href="./">
-        <img src="assets/img/logo-mark.svg" width="36" height="36" alt="">
-        <span>RAZOV<span class="brand__tld">.tech</span></span>
-      </a>
-      <div class="header__actions">
-        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
-          <svg class="icon icon--sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
-          <svg class="icon icon--moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
-        </button>
-      </div>
-    </div>
+  <header class="bar">
+    <!-- The razov.tech brand, as in Razov Bots' header. At the parent it reads RAZOV.tech solutions. -->
+    <a class="brand" href="./">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#star"/></svg>
+      <span><span class="brand-name">Razov</span><span class="brand-tld">.tech</span> <span class="brand-sub">solutions</span></span>
+    </a>
   </header>
 
-  <main id="main">
-    <section class="hub" aria-labelledby="hub-title">
-      <div class="hub__backdrop" aria-hidden="true"></div>
-      <canvas class="hub__canvas" data-hero-canvas aria-hidden="true"></canvas>
-      <div class="hub__scrim" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hub__intro">
-          <p class="eyebrow">RAZOV.tech</p>
-          <h1 id="hub-title">Software that talks to your customers and works with your data.</h1>
-          <p class="hub__lead">Two product lines, each with its own site. Choose where you want to go.</p>
-        </div>
+  <main id="main" class="hub" aria-labelledby="hub-title">
+    <div class="hub__intro">
+      <h1 id="hub-title">Software that talks to your customers and works with your data.</h1>
+      <p class="hub__lead">Two product lines, each with its own site. Choose where you want to go.</p>
+    </div>
 
-        <div class="doors">
-          <article class="door door--bots" aria-labelledby="door-bots">
-            <span class="door__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-chat"/></svg></span>
-            <h2 id="door-bots"><a href="/razov-bots/">Razov Bots</a></h2>
-            <p class="door__text">AI assistants that answer, book and sell on Telegram.</p>
-            <ul class="door__list">
-              <li><span>Answer customers in <strong>Arabic, English and French</strong></span></li>
-              <li><span>Book appointments and take orders</span></li>
-              <li><span>Tell your team about each one</span></li>
-            </ul>
-            <p class="door__go" aria-hidden="true">Open Razov Bots <svg class="icon" focusable="false"><use href="#i-arrow"/></svg></p>
-            <p class="door__path">hasanradi93.github.io/razov-bots/</p>
-          </article>
-
-          <article class="door door--db" aria-labelledby="door-db">
-            <span class="door__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-db"/></svg></span>
-            <h2 id="door-db"><a href="/razov-db/">Razov DB</a></h2>
-            <p class="door__text">Database tools that ask, convert and design.</p>
-            <ul class="door__list">
-              <li><span><strong>DataPilot AI</strong>: ask your database questions in plain words</span></li>
-              <li><span><strong>SchemaZone</strong>: see a .sql file as an ER diagram, in your browser</span></li>
-              <li><span><strong>SQLNext</strong>: move a MySQL database to a newer version (coming soon)</span></li>
-            </ul>
-            <p class="door__go" aria-hidden="true">Open Razov DB <svg class="icon" focusable="false"><use href="#i-arrow"/></svg></p>
-            <p class="door__path">hasanradi93.github.io/razov-db/</p>
-          </article>
+    <div class="doors">
+      <article class="door door--bots" aria-labelledby="door-bots">
+        <p class="door__lockup" aria-hidden="true">
+          <svg class="brand-mark" viewBox="0 0 32 32" focusable="false"><use href="#star"/></svg>
+          razov.tech
+          <svg class="brand-branch" viewBox="0 0 16 16" focusable="false"><path d="M3 2v6a4 4 0 0 0 4 4h6M10 9l3 3-3 3"/></svg>
+          <b>bots</b>
+        </p>
+        <div class="door__light" aria-hidden="true"><svg class="door__star" viewBox="0 0 32 32" focusable="false"><use href="#star"/><circle cx="16" cy="16" r="2.6"/></svg></div>
+        <h2 id="door-bots"><a href="/razov-bots/">Razov Bots</a></h2>
+        <p class="door__text">AI assistants that answer, book and sell on Telegram.</p>
+        <ul class="door__list">
+          <li><span>Answer customers in <strong>Arabic, English and French</strong></span></li>
+          <li><span>Book appointments and take orders</span></li>
+          <li><span>Tell your team about each one</span></li>
+        </ul>
+        <div class="door__foot">
+          <p class="door__go" aria-hidden="true">Open Razov Bots <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></p>
+          <p class="door__path">hasanradi93.github.io/razov-bots/</p>
         </div>
-      </div>
-    </section>
+        <span class="door__sill" aria-hidden="true"></span>
+      </article>
+
+      <article class="door door--db" aria-labelledby="door-db">
+        <p class="door__lockup" aria-hidden="true">
+          <svg class="brand-mark" viewBox="0 0 32 32" focusable="false"><use href="#star"/></svg>
+          razov.tech
+          <svg class="brand-branch" viewBox="0 0 16 16" focusable="false"><path d="M3 2v6a4 4 0 0 0 4 4h6M10 9l3 3-3 3"/></svg>
+          <b>db</b>
+        </p>
+        <div class="door__light" aria-hidden="true"><svg class="door__star" viewBox="0 0 32 32" focusable="false"><use href="#star"/><circle cx="16" cy="16" r="2.6"/></svg></div>
+        <h2 id="door-db"><a href="/razov-db/">Razov DB</a></h2>
+        <p class="door__text">Database tools that ask, convert and design.</p>
+        <ul class="door__list">
+          <li><span><strong>DataPilot AI</strong>: ask your database questions in plain words</span></li>
+          <li><span><strong>SchemaZone</strong>: see a .sql file as an ER diagram, in your browser</span></li>
+          <li><span><strong>SQLNext</strong>: move a MySQL database to a newer version (coming soon)</span></li>
+        </ul>
+        <div class="door__foot">
+          <p class="door__go" aria-hidden="true">Open Razov DB <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-arrow"/></svg></p>
+          <p class="door__path">hasanradi93.github.io/razov-db/</p>
+        </div>
+        <span class="door__sill" aria-hidden="true"></span>
+      </article>
+    </div>
   </main>
 
-  <footer class="site-footer site-footer--slim">
-    <div class="container footer__bottom">
-      <p>© 2026 RAZOV.tech</p>
-      <p><a href="https://github.com/hasanradi93">GitHub</a></p>
-    </div>
-    <nav class="container footer__legal" aria-label="Legal">
+  <footer class="foot">
+    <p>© 2026 RAZOV.tech solutions</p>
+    <nav aria-label="Legal and contact">
       <a href="/razov-db/legal.html#terms">Terms</a>
       <a href="/razov-db/legal.html#privacy">Privacy</a>
       <a href="/razov-db/legal.html#refunds">Refunds</a>
+      <a href="https://github.com/hasanradi93">GitHub</a>
       <a href="mailto:hassan93radi@gmail.com">hassan93radi@gmail.com</a>
     </nav>
   </footer>
-  <p class="visually-hidden" role="status" aria-live="polite" data-live></p>
 </body>
 </html>

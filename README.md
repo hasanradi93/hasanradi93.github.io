@@ -1,4 +1,4 @@
-# RAZOV hub
+# RAZOV.tech solutions hub
 
 The root page of <https://hasanradi93.github.io/>, published with GitHub Pages. It is one simple page with two
 doors:
@@ -18,14 +18,26 @@ Until 2026-11-25 this repo held the database site itself. Its history continues 
 | `404.html` | Not-found page for paths that no project repo serves (uses `/...` paths on purpose) |
 | `legal.html` | Forwarder to `/razov-db/legal.html`; keeps `#terms`, `#privacy`, `#refunds` |
 | `schemazone/index.html` | Forwarder to `/razov-db/schemazone/`; keeps the `#/zone/<id>` hash |
-| `assets/css/base.css` | Design tokens (dark and light), header, buttons, footer (same as in razov-db) |
-| `assets/css/hub.css` | Hub layout, the two doors, slim footer, forwarder pages |
-| `assets/js/site.js` | Theme toggle (a copy of razov-db's file; the store switches there do nothing here) |
-| `assets/js/hero-network.js` | The animated network behind the hub |
+| `assets/css/base.css` | Fonts, tokens (graphite, dark only), the brand header, buttons, footer |
+| `assets/css/hub.css` | The hub's own background, the two lit doors, forwarder pages |
+| `assets/fonts/` | Anybody and Readex Pro, the razov.tech brand fonts (SIL OFL, see `OFL.txt`) |
+| `assets/img/` | The star mark (`logo-mark.svg`, used by the JSON-LD) and the apple-touch icon |
+| `favicon.svg` | The star mark on a rounded square, light on graphite |
 | `robots.txt` | The only robots file crawlers read; lists the sitemaps of `/`, `/razov-db/`, `/razov-bots/` |
 | `sitemap.xml` | Lists `/` only; each project repo has its own sitemap |
 
-The legal links in the footer go to `/razov-db/legal.html`.
+The page has no script. The legal links in the footer go to `/razov-db/legal.html`.
+
+## Brand
+
+The razov.tech brand is shared with Razov Bots and Razov DB: the eight-point star (the `#star` symbol at
+the top of each page), Anybody for the brand and headings, Readex Pro for text. Here, at the parent, the
+header reads **RAZOV.tech solutions** with a light star; Razov Bots reads `razov.tech ↳ bots` with a teal
+star and Razov DB `razov.tech ↳ db` with a violet one. Each door on the hub shows its line's lockup.
+
+The hub's background is its own: a calm graphite room, and each door a large panel lit from within by its
+line's colour (teal for Bots, violet for DB). CSS only, and still when the visitor prefers reduced motion.
+When the razov.tech domain is live, the `razov.tech` links in Razov DB's header change to `https://razov.tech`.
 
 ## Rules
 
