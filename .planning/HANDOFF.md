@@ -20,7 +20,13 @@ Updated: 2026-11-25 (session e9b8e228-a8c9-4941-8e10-76d7177fe510)
 | 3 | Legal page and Terms, Privacy, Refunds and email in every footer (for the Paddle domain review) | done |
 | 4 | SchemaZone build in `/schemazone/`; sitemap lists `/`, `/schemazone/`, `/legal.html` | done |
 | 5 | Local check at 375 px: no sideways scroll, no console errors; SchemaZone sample opens | done |
-| 6 | Create the public repo, push, turn on Pages, check the live URLs | next |
+| 6 | Create the public repo, push, turn on Pages, check the live URLs | done 2026-11-25 |
+
+Live check, 2026-11-25:
+- Return 200: `/`, `/legal.html`, `/schemazone/` (its assets and samples), `/sitemap.xml` and `/datapilot/`.
+- An unknown path returns 404 with the custom page.
+- The DataPilot installer link downloads (186 MB).
+- SchemaZone in Chrome on the live domain: the SQLite sample gave 8 tables and 11 relations, with no console messages.
 
 ## Switches for later
 
